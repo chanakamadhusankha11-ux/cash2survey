@@ -1,0 +1,149 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+#main-content {
+    max-width: 850px;
+    margin: auto;
+    padding: 0 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 2.5rem 0;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+section {
+    padding: 2.5rem 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.step {
+    flex-basis: 30%;
+    min-width: 250px;
+    padding: 1rem;
+}
+
+.cta-section {
+    background: #3498db;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.progress-container {
+    width: 80%;
+    background-color: #bdc3c7;
+    border-radius: 25px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #2ecc71;
+    border-radius: 25px;
+    transition: width 0.5s ease-in-out;
+}
+
+#status-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#survey-button {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: 600;
+}
+
+#survey-button:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+#survey-button:not(:disabled):hover {
+    background: #219d55;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: #777;
+    margin-top: 2rem;
+}
+
+/* Popup Styles */
+.popup-container {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center;
+    align-items: center; z-index: 1000;
+}
+.popup-content {
+    background: #fff; padding: 30px; border-radius: 10px;
+    text-align: center; width: 90%; max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+#popup-close-btn {
+    background: #e74c3c; color: #fff; border: none; padding: 10px 20px;
+    border-radius: 5px; cursor: pointer;
+}
+
+/* Fake Cursor Style */
+#fake-cursor {
+    position: fixed;
+    width: 20px; height: 20px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Arrow-cursor.png');
+    background-size: contain; background-repeat: no-repeat;
+    z-index: 9999;
+    transition: top 0.2s linear, left 0.2s linear;
+    display: none;
+    pointer-events: none;
+}
